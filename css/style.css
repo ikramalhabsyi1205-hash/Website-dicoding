@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 0;
+  }
+  
+  header {
+    background: #1e3a8a;
+    color: #fff;
+  }
+  
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-bottom: 10px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+
+  .nav-links a.active {
+    text-decoration: underline;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1e3a8a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .section-title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1e3a8a;
+  }
+  
+  .skill-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #0f172a;
+    text-decoration: none;
+    display: block;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+  }
+  
+  .project-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .form-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input,
+  .textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-family: inherit;
+    font-size: 14px;
+  }
+
+  .textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-message {
+    margin-top: 10px;
+    color: #1e3a8a;
+    font-weight: 500;
+  }
+  
+  .aside {
+    background: #e2e8f0;
+    padding: 20px 0;
+  }
+  
+  .aside-content {
+    text-align: center;
+  }
+
+  .aside-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #1e3a8a;
+  }
+  
+  footer {
+    background: #1e3a8a;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .page-hero {
+    text-align: center;
+    padding: 30px 0 10px;
+  }
+
+  .page-hero p {
+    max-width: 720px;
+    margin: 10px auto 0;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .btn.secondary {
+    background: #0f172a;
+  }
+  
+  /* Responsive Tablet & Desktop */
+  @media (min-width: 768px) {
+  
+    .header-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      padding: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+  
+    .hero {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  
+    .skill-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+  }
